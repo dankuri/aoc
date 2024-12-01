@@ -1,6 +1,6 @@
 defmodule Day1 do
   def part1(input) do
-    {left, right} = parse_input(input)
+    {left, right} = parse(input)
 
     Enum.zip(Enum.sort(left), Enum.sort(right))
     |> Enum.map(fn {l, r} -> abs(l - r) end)
@@ -9,7 +9,7 @@ defmodule Day1 do
   end
 
   def part2(input) do
-    {left, right} = parse_input(input)
+    {left, right} = parse(input)
     freq = Enum.frequencies(right)
 
     left
@@ -18,7 +18,7 @@ defmodule Day1 do
     |> IO.inspect(label: "part 2")
   end
 
-  def parse_input(input) do
+  def parse(input) do
     input
     |> String.split("\n", trim: true)
     |> Enum.map(&String.split/1)
