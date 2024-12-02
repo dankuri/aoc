@@ -1,4 +1,4 @@
-# substitue DAY with day number (%s/DAY/7/g) and remove this comment
+# substitute DAY with day number (%s/DAY/7/g) and remove this comment
 defmodule DayDAY do
   def part1(input) do
     nil
